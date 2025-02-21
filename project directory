@@ -1,0 +1,12 @@
+project directory to save and exceute
+
+fluentflow/
+├── app.py                # Flask backend
+├── templates/
+│   ├── index.html        # Main translation page
+│   └── history.html      # Translation history page
+├── static/
+│   ├── styles.css        # Updated professional styles
+│   ├── script.js         # Handles translation logic
+│   ├── background.jpg    # Elegant background image
+└── translations.json     # Stores translation history
