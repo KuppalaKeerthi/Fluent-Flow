@@ -1,0 +1,28 @@
+[
+    {
+        "input": "hello",
+        "translations": {
+            "te": {
+                "name": "telugu",
+                "text": "హలో"
+            },
+            "fr": {
+                "name": "french",
+                "text": "Bonjour"
+            }
+        }
+    },
+    {
+        "input": "hello",
+        "translations": {
+            "te": {
+                "name": "telugu",
+                "text": "హలో"
+            },
+            "hi": {
+                "name": "hindi",
+                "text": "नमस्ते"
+            }
+        }
+    }
+]

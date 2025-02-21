@@ -1,0 +1,121 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #adb0b1, #e7edef);
+    color: rgb(18, 18, 21);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #2e2f30, #666969);
+    color: rgb(230, 236, 237);
+    padding: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Language Selection */
+.language-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.language-select {
+    font-size: 18px;
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Text Area */
+.text-area {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#source-text {
+    font-size: 20px;
+    width: 60%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 18px;
+    background: #434647;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    transition: background 0.3s, transform 0.2s;
+    font-weight:bold;
+}
+
+button:hover {
+    background: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Translated Text */
+.translated-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#translated-text {
+    font-size: 20px;
+    width: 60%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+/* Responsive Design */
+@media (max-width: 890px) {
+    .language-selection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .language-select {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    #source-text, #translated-text {
+        width: 90%;
+    }
+
+    .button-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

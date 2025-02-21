@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translation History</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <style>
+    /* Global Styles */
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 80%;
+        margin: 50px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    #back-btn {
+        background: #3498db;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 20px;
+        transition: background 0.3s ease;
+    }
+
+    #back-btn:hover {
+        background: #2980b9;
+    }
+
+    /* Table Styling */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+    }
+
+    th {
+        background: #2c3e50;
+        color: white;
+        font-size: 18px;
+    }
+
+    tr:nth-child(even) {
+        background: #f9f9f9;
+    }
+
+    tr:hover {
+        background: #f1f1f1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .container {
+            max-width: 95%;
+        }
+        table {
+            font-size: 14px;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📜 Translation History</h1>
+    <button id="back-btn">🏠 Back to Home</button>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Input</th>
+            <th>Language</th>
+            <th>Translation</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in history %}
+          <tr>
+              <td>{{ entry.input_text }}</td>
+              <td>{{ entry.target_lang }}</td>
+              <td>{{ entry.translated_text }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("back-btn").addEventListener("click", function() {
+        window.location.href = "/";
+    });
+  </script>
+</body>
+</html>
